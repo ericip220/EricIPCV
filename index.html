@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +24,7 @@
             height: 100%;
             z-index: -1;
         }
+
         .chart-container {
             position: relative;
             width: 100%;
@@ -32,11 +34,13 @@
             height: 300px;
             max-height: 400px;
         }
+
         @media (min-width: 768px) {
             .chart-container {
                 height: 400px;
             }
         }
+
         .timeline-item:before {
             content: '';
             position: absolute;
@@ -45,18 +49,23 @@
             width: 1.75rem;
             height: 1.75rem;
             border-radius: 9999px;
-            background-color: #f3f4f6; /* gray-100 */
-            border: 4px solid #38bdf8; /* sky-500 */
+            background-color: #f3f4f6;
+            /* gray-100 */
+            border: 4px solid #38bdf8;
+            /* sky-500 */
         }
+
         .fade-in-section {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
+
         .fade-in-section.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         .glass-card {
             background-color: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(20px);
@@ -64,15 +73,19 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
         }
+
         .glass-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        #achievement-icon.is-expanded, .skill-category-icon.is-expanded {
+
+        #achievement-icon.is-expanded,
+        .skill-category-icon.is-expanded {
             transform: rotate(45deg);
         }
     </style>
 </head>
+
 <body class="bg-gray-200 text-gray-800 font-sans leading-relaxed">
     <canvas id="background-canvas"></canvas>
 
@@ -84,11 +97,16 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#summary" class="text-gray-700 hover:bg-white/50 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Summary</a>
-                        <a href="#skills" class="text-gray-700 hover:bg-white/50 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
-                        <a href="#experience" class="text-gray-700 hover:bg-white/50 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Experience</a>
-                        <a href="#certs" class="text-gray-700 hover:bg-white/50 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Certifications</a>
-                        <a href="#eligibility" class="text-gray-700 hover:bg-white/50 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Details</a>
+                        <a href="#summary"
+                            class="text-gray-700 hover:bg-white/50 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Summary</a>
+                        <a href="#skills"
+                            class="text-gray-700 hover:bg-white/50 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#experience"
+                            class="text-gray-700 hover:bg-white/50 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#certs"
+                            class="text-gray-700 hover:bg-white/50 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Certifications</a>
+                        <a href="#eligibility"
+                            class="text-gray-700 hover:bg-white/50 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Details</a>
                     </div>
                 </div>
             </div>
@@ -96,32 +114,40 @@
     </nav>
 
     <main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        
+
         <section id="hero" class="text-center py-16">
             <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight">Eric IP</h1>
             <p class="mt-4 text-xl md:text-2xl text-gray-700">Senior Linux Engineer</p>
             <div class="mt-8 flex justify-center items-center flex-wrap gap-x-6 gap-y-4 text-sm">
-                <a href="mailto:ericip.uk@gmail.com" class="flex items-center gap-2 text-gray-700 hover:text-sky-600 transition-colors">
+                <a href="mailto:ericip.uk@gmail.com"
+                    class="flex items-center gap-2 text-gray-700 hover:text-sky-600 transition-colors">
                     <span class="text-xl">📧</span>
                     <span>ericip.uk@gmail.com</span>
                 </a>
-                <a href="tel:+447596754511" class="flex items-center gap-2 text-gray-700 hover:text-sky-600 transition-colors">
-                     <span class="text-xl">📞</span>
+                <a href="tel:+447596754511"
+                    class="flex items-center gap-2 text-gray-700 hover:text-sky-600 transition-colors">
+                    <span class="text-xl">📞</span>
                     <span>+44 7596 754511</span>
                 </a>
-                <a href="https://www.linkedin.com/in/ericip-uk" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-700 hover:text-sky-600 transition-colors">
-                    <span class="w-6 h-6 rounded bg-[#0077b5] flex items-center justify-center text-white font-bold text-xs">in</span>
+                <a href="https://www.linkedin.com/in/ericip-uk" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-gray-700 hover:text-sky-600 transition-colors">
+                    <span
+                        class="w-6 h-6 rounded bg-[#0077b5] flex items-center justify-center text-white font-bold text-xs">in</span>
                     <span>LinkedIn</span>
                 </a>
-                <a href="https://wa.me/447596754511" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors">
-                    <span class="w-6 h-6 rounded-full bg-[#25D366] flex items-center justify-center text-white text-base">
+                <a href="https://wa.me/447596754511" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors">
+                    <span
+                        class="w-6 h-6 rounded-full bg-[#25D366] flex items-center justify-center text-white text-base">
                         <span>💬</span>
                     </span>
                     <span>WhatsApp</span>
                 </a>
-                <a href="https://signal.me/#p/+85263540918" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-700 hover:text-blue-700 transition-colors">
-                    <span class="w-6 h-6 rounded-full bg-[#3a76f0] flex items-center justify-center text-white text-base">
-                         <span>💬</span>
+                <a href="https://signal.me/#p/+85263540918" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-gray-700 hover:text-blue-700 transition-colors">
+                    <span
+                        class="w-6 h-6 rounded-full bg-[#3a76f0] flex items-center justify-center text-white text-base">
+                        <span>💬</span>
                     </span>
                     <span>Signal</span>
                 </a>
@@ -132,7 +158,13 @@
 
             <section id="summary" class="glass-card p-8 rounded-2xl shadow-lg fade-in-section">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Professional Summary</h2>
-                <p class="text-gray-700">A highly experienced and results-oriented Senior Linux Engineer with over 20 years of expertise in enterprise infrastructure management, specializing in Red Hat Enterprise Linux (RHEL), cloud platforms (GCP, Azure), and automation (Ansible, Bash, Korn). Proven track record of delivering resilient, high-availability solutions and leading large-scale infrastructure transformation projects for global financial institutions. Passionate about leveraging modern technologies to drive operational excellence and seeking a challenging Linux-focused role in the UK.</p>
+                <p class="text-gray-700">A highly experienced and results-oriented Senior Linux Engineer with over 20
+                    years of expertise in enterprise infrastructure management, specializing in Red Hat Enterprise Linux
+                    (RHEL), cloud platforms (GCP, Azure), and automation (Ansible, Bash, Korn). Proven track record of
+                    delivering resilient, high-availability solutions and leading large-scale infrastructure
+                    transformation projects for global financial institutions. Passionate about leveraging modern
+                    technologies to drive operational excellence and seeking a challenging Linux-focused role in the UK.
+                </p>
             </section>
 
             <section id="skills" class="fade-in-section">
@@ -140,66 +172,92 @@
                 <div class="glass-card p-8 rounded-2xl shadow-lg space-y-4">
                     <!-- Skill Category -->
                     <div>
-                        <button class="skill-category-toggle flex items-center justify-between w-full p-3 text-left font-semibold text-gray-700 hover:text-gray-900 transition rounded-lg hover:bg-white/50">
+                        <button
+                            class="skill-category-toggle flex items-center justify-between w-full p-3 text-left font-semibold text-gray-700 hover:text-gray-900 transition rounded-lg hover:bg-white/50">
                             <span>Operating Systems & Virtualization</span>
-                            <span class="skill-category-icon transform transition-transform duration-300 text-xl font-bold">+</span>
+                            <span
+                                class="skill-category-icon transform transition-transform duration-300 text-xl font-bold">+</span>
                         </button>
-                        <div class="skill-category-details mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                        <div class="skill-category-details mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out"
+                            style="max-height: 0px;">
                             <div class="py-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
-                                <p>Linux & Unix Administration</p><p>Red Hat Enterprise Linux (RHEL)</p>
-                                <p>IBM AIX (v6, v7) & VIO</p><p>Virtual Machines(VMware)</p>
+                                <p>Linux & Unix Administration</p>
+                                <p>Red Hat Enterprise Linux (RHEL)</p>
+                                <p>IBM AIX (v6, v7) & VIO</p>
+                                <p>Virtual Machines(VMware)</p>
                             </div>
                         </div>
                     </div>
                     <!-- Skill Category -->
                     <div>
-                        <button class="skill-category-toggle flex items-center justify-between w-full p-3 text-left font-semibold text-gray-700 hover:text-gray-900 transition rounded-lg hover:bg-white/50">
+                        <button
+                            class="skill-category-toggle flex items-center justify-between w-full p-3 text-left font-semibold text-gray-700 hover:text-gray-900 transition rounded-lg hover:bg-white/50">
                             <span>High Availability & Clustering</span>
-                            <span class="skill-category-icon transform transition-transform duration-300 text-xl font-bold">+</span>
+                            <span
+                                class="skill-category-icon transform transition-transform duration-300 text-xl font-bold">+</span>
                         </button>
-                        <div class="skill-category-details mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                        <div class="skill-category-details mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out"
+                            style="max-height: 0px;">
                             <div class="py-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
-                                <p>Veritas Cluster Server (VCS/ Veritas InfoScale)</p><p>Veritas Storage Foundation</p>
-                                <p>IBM POWERHA / HACMP</p><p>Kubernetes</p>
+                                <p>Veritas Cluster Server (VCS/ Veritas InfoScale)</p>
+                                <p>Veritas Storage Foundation</p>
+                                <p>IBM POWERHA / HACMP</p>
+                                <p>Kubernetes</p>
                             </div>
                         </div>
                     </div>
                     <!-- Skill Category -->
                     <div>
-                        <button class="skill-category-toggle flex items-center justify-between w-full p-3 text-left font-semibold text-gray-700 hover:text-gray-900 transition rounded-lg hover:bg-white/50">
+                        <button
+                            class="skill-category-toggle flex items-center justify-between w-full p-3 text-left font-semibold text-gray-700 hover:text-gray-900 transition rounded-lg hover:bg-white/50">
                             <span>Cloud Technologies</span>
-                            <span class="skill-category-icon transform transition-transform duration-300 text-xl font-bold">+</span>
+                            <span
+                                class="skill-category-icon transform transition-transform duration-300 text-xl font-bold">+</span>
                         </button>
-                        <div class="skill-category-details mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                        <div class="skill-category-details mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out"
+                            style="max-height: 0px;">
                             <div class="py-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
-                                <p>Google Cloud Platform (GCP)</p><p>Microsoft Azure</p>
-                                <p>Google Kubernetes Engine (GKE)</p><p>Google BigQuery</p>
-                                <p>Cloud Architecture & Development</p><p>Cloud Infrastructure</p>
+                                <p>Google Cloud Platform (GCP)</p>
+                                <p>Microsoft Azure</p>
+                                <p>Google Kubernetes Engine (GKE)</p>
+                                <p>Google BigQuery</p>
+                                <p>Cloud Architecture & Development</p>
+                                <p>Cloud Infrastructure</p>
                             </div>
                         </div>
                     </div>
                     <!-- Skill Category -->
                     <div>
-                        <button class="skill-category-toggle flex items-center justify-between w-full p-3 text-left font-semibold text-gray-700 hover:text-gray-900 transition rounded-lg hover:bg-white/50">
+                        <button
+                            class="skill-category-toggle flex items-center justify-between w-full p-3 text-left font-semibold text-gray-700 hover:text-gray-900 transition rounded-lg hover:bg-white/50">
                             <span>Automation & Scripting</span>
-                            <span class="skill-category-icon transform transition-transform duration-300 text-xl font-bold">+</span>
+                            <span
+                                class="skill-category-icon transform transition-transform duration-300 text-xl font-bold">+</span>
                         </button>
-                        <div class="skill-category-details mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                        <div class="skill-category-details mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out"
+                            style="max-height: 0px;">
                             <div class="py-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
-                                <p>Ansible</p><p>Python (Concept)</p><p>Unix Shell Scripting (Bash, Korn)</p>
+                                <p>Ansible</p>
+                                <p>Python (Concept)</p>
+                                <p>Unix Shell Scripting (Bash, Korn)</p>
                             </div>
                         </div>
                     </div>
-                     <!-- Skill Category -->
+                    <!-- Skill Category -->
                     <div>
-                        <button class="skill-category-toggle flex items-center justify-between w-full p-3 text-left font-semibold text-gray-700 hover:text-gray-900 transition rounded-lg hover:bg-white/50">
+                        <button
+                            class="skill-category-toggle flex items-center justify-between w-full p-3 text-left font-semibold text-gray-700 hover:text-gray-900 transition rounded-lg hover:bg-white/50">
                             <span>Professional Skills</span>
-                            <span class="skill-category-icon transform transition-transform duration-300 text-xl font-bold">+</span>
+                            <span
+                                class="skill-category-icon transform transition-transform duration-300 text-xl font-bold">+</span>
                         </button>
-                        <div class="skill-category-details mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                        <div class="skill-category-details mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out"
+                            style="max-height: 0px;">
                             <div class="py-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
-                                <p>Technical Support</p><p>IT Transformation Projects</p>
-                                <p>Leadership</p><p>Research & Public Speaking</p>
+                                <p>Technical Support</p>
+                                <p>IT Transformation Projects</p>
+                                <p>Leadership</p>
+                                <p>Research & Public Speaking</p>
                             </div>
                         </div>
                     </div>
@@ -214,22 +272,46 @@
                         <p class="text-md font-semibold text-gray-600">HSBC | Hong Kong</p>
                         <p class="text-sm text-gray-500 mb-3">Apr 2008 - Jul 2024</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-3">
-                            <li><strong class="font-semibold text-gray-800">Linux System Administration:</strong> Engineered, deployed, and maintained a global estate of thousands of Red Hat Enterprise Linux (RHEL) and SUSE Linux servers, ensuring maximum stability, security, and performance for mission-critical financial applications.</li>
-                            <li><strong class="font-semibold text-gray-800">Automation:</strong> Utilized Ansible and Bash/Korn scripting to automate routine system administration tasks, including patch management, user administration, and system health checks, significantly reducing manual effort and improving consistency.</li>
-                            <li><strong class="font-semibold text-gray-800">Cloud & Virtualization:</strong> Managed a large virtualized estate using VMware vCenter/ESXi. Gained hands-on experience with GCP and Azure, contributing to the bank's hybrid cloud strategy.</li>
-                            <li><strong class="font-semibold text-gray-800">Incident Management & Performance Tuning:</strong> Acted as a senior escalation point for critical incidents, leading root cause analysis and implementing performance optimizations across the Linux/Unix infrastructure.</li>
-                            <li><strong class="font-semibold text-gray-800">High Availability:</strong> Expertly administered high-availability clusters using IBM PowerHA and Veritas VCS to guarantee uptime for core business services.</li>
+                            <li><strong class="font-semibold text-gray-800">Linux System Administration:</strong>
+                                Engineered, deployed, and maintained a global estate of thousands of Red Hat Enterprise
+                                Linux (RHEL) and SUSE Linux servers, ensuring maximum stability, security, and
+                                performance for mission-critical financial applications.</li>
+                            <li><strong class="font-semibold text-gray-800">Automation:</strong> Utilized Ansible and
+                                Bash/Korn scripting to automate routine system administration tasks, including patch
+                                management, user administration, and system health checks, significantly reducing manual
+                                effort and improving consistency.</li>
+                            <li><strong class="font-semibold text-gray-800">Cloud & Virtualization:</strong> Managed a
+                                large virtualized estate using VMware vCenter/ESXi. Gained hands-on experience with GCP
+                                and Azure, contributing to the bank's hybrid cloud strategy.</li>
+                            <li><strong class="font-semibold text-gray-800">Incident Management & Performance
+                                    Tuning:</strong> Acted as a senior escalation point for critical incidents, leading
+                                root cause analysis and implementing performance optimizations across the Linux/Unix
+                                infrastructure.</li>
+                            <li><strong class="font-semibold text-gray-800">High Availability:</strong> Expertly
+                                administered high-availability clusters using IBM PowerHA and Veritas VCS to guarantee
+                                uptime for core business services.</li>
                         </ul>
                         <div class="mt-4">
-                            <button id="toggle-achievement" class="flex items-center justify-between w-full p-3 text-left font-semibold text-sky-600 hover:text-sky-500 transition rounded-lg hover:bg-white/50">
+                            <button id="toggle-achievement"
+                                class="flex items-center justify-between w-full p-3 text-left font-semibold text-sky-600 hover:text-sky-500 transition rounded-lg hover:bg-white/50">
                                 <span>🏆 Major Achievement: Infrastructure Transformation</span>
-                                <span id="achievement-icon" class="transform transition-transform duration-300 text-xl font-bold">+</span>
+                                <span id="achievement-icon"
+                                    class="transform transition-transform duration-300 text-xl font-bold">+</span>
                             </button>
-                            <div id="achievement-details" class="mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0px;">
+                            <div id="achievement-details"
+                                class="mt-2 pl-4 border-l-2 border-gray-300 overflow-hidden transition-all duration-500 ease-in-out"
+                                style="max-height: 0px;">
                                 <div class="py-2 space-y-2 text-sm">
-                                    <p class="text-gray-600">Played a key role in a major transformation initiative, migrating hundreds of business-critical applications from legacy systems to a modern infrastructure based on Red Hat Enterprise Linux 7.</p>
-                                    <p class="text-gray-600">Coordinated with multiple cross-functional teams including application, network, and storage to ensure a seamless migration with minimal business disruption.</p>
-                                    <p class="text-gray-600">The project resulted in over <strong class="text-gray-700">$2 million in annual cost savings</strong> through the decommissioning of 100+ physical servers and 500+ logical partitions, enhancing overall infrastructure efficiency and resilience.</p>
+                                    <p class="text-gray-600">Played a key role in a major transformation initiative,
+                                        migrating hundreds of business-critical applications from legacy systems to a
+                                        modern infrastructure based on Red Hat Enterprise Linux 7.</p>
+                                    <p class="text-gray-600">Coordinated with multiple cross-functional teams including
+                                        application, network, and storage to ensure a seamless migration with minimal
+                                        business disruption.</p>
+                                    <p class="text-gray-600">The project resulted in over <strong
+                                            class="text-gray-700">$2 million in annual cost savings</strong> through the
+                                        decommissioning of 100+ physical servers and 500+ logical partitions, enhancing
+                                        overall infrastructure efficiency and resilience.</p>
                                 </div>
                             </div>
                         </div>
@@ -248,172 +330,224 @@
                         <p class="text-md font-semibold text-gray-600">AIA (AIDC) / Bank of China | Hong Kong</p>
                         <p class="text-sm text-gray-500 mb-3">Aug 2000 - Jan 2007</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Maintained large-scale enterprise systems including IBM Mainframe and Sun Solaris platforms.</li>
-                            <li>Executed and monitored overnight batch processing, server backups, and system health checks.</li>
+                            <li>Maintained large-scale enterprise systems including IBM Mainframe and Sun Solaris
+                                platforms.</li>
+                            <li>Executed and monitored overnight batch processing, server backups, and system health
+                                checks.</li>
                         </ul>
                     </div>
                 </div>
             </section>
-            
+
             <section id="certs" class="fade-in-section">
-                 <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Education & Certifications</h2>
-                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                   <a href="https://www.credential.net/d2ecaa18-3b69-4e95-a489-db4c4e6fc6a4" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xl">G</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Professional Cloud Developer</h3>
-                               <p class="text-sm text-gray-600">Google Cloud · Issued Jul 2022</p>
-                               <p class="text-xs text-red-500 font-semibold">Expired Jul 2024</p>
-                           </div>
-                       </div>
-                   </a>
-                    <a href="https://www.credential.net/5cac76fc-1bf7-43f3-9d56-f5dc61020428" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xl">G</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Professional Cloud Architect</h3>
-                               <p class="text-sm text-gray-600">Google Cloud · Issued Aug 2020</p>
-                               <p class="text-xs text-red-500 font-semibold">Expired Sep 2024</p>
-                           </div>
-                       </div>
-                   </a>
-                    <a href="https://www.youracclaim.com/badges/f90ddc29-c77c-4a6d-b8c6-fdddb190d430/linked_in_profile" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 grid grid-cols-2 gap-px p-1">
-                               <div class="bg-red-500"></div><div class="bg-green-500"></div><div class="bg-blue-500"></div><div class="bg-yellow-400"></div>
-                           </div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Azure Fundamentals</h3>
-                               <p class="text-sm text-gray-600">Microsoft · Issued Mar 2020</p>
-                           </div>
-                       </div>
-                   </a>
-                   <a href="https://www.cloudskillsboost.google/public_profiles/345e7094-81e9-4b1a-834a-5b927ab709c3/badges/2337826?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">BigQuery for Data Analysis</h3>
-                               <p class="text-sm text-gray-600">Google Cloud Skills Boost · Jun 2022</p>
-                           </div>
-                       </div>
-                   </a>
-                    <a href="https://www.cloudskillsboost.google/public_profiles/345e7094-81e9-4b1a-834a-5b927ab709c3/badges/2338150?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Migrating Virtual Machines</h3>
-                               <p class="text-sm text-gray-600">Google Cloud Skills Boost · Jun 2022</p>
-                           </div>
-                       </div>
-                   </a>
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/L5MN8A8TREG9" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">App Deployment, Debugging, and Performance</h3>
-                               <p class="text-sm text-gray-600">Coursera · Issued Mar 2022</p>
-                           </div>
-                       </div>
-                   </a>
-                   <a href="https://www.coursera.org/account/accomplishments/certificate/59EDCEWBL4ZU" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Getting Started With App Development</h3>
-                               <p class="text-sm text-gray-600">Coursera · Issued Mar 2022</p>
-                           </div>
-                       </div>
-                   </a>
-                   <a href="https://www.coursera.org/account/accomplishments/certificate/3X5ENDN6GHFJ" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Getting Started with GKE</h3>
-                               <p class="text-sm text-gray-600">Coursera · Issued Mar 2022</p>
-                           </div>
-                       </div>
-                   </a>
-                   <a href="https://www.coursera.org/account/accomplishments/certificate/2PPSSQYMEN3M" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Securing & Integrating App...</h3>
-                               <p class="text-sm text-gray-600">Coursera · Issued Mar 2022</p>
-                           </div>
-                       </div>
-                   </a>
-                   <a href="https://www.credential.net/0e8f23ab-f53b-4725-b304-0214e69b61bb" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">R</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Architecting with GKE</h3>
-                               <p class="text-sm text-gray-600">ROI Training · Issued Nov 2020</p>
-                           </div>
-                       </div>
-                   </a>
-                   <a href="https://www.coursera.org/account/accomplishments/certificate/XVKQ4HMGK978" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Reliable GCP Infrastructure</h3>
-                               <p class="text-sm text-gray-600">Coursera · Issued May 2020</p>
-                           </div>
-                       </div>
-                   </a>
-                   <a href="https://www.coursera.org/account/accomplishments/certificate/B3DH9LNQRNL2" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Elastic GCP Infrastructure</h3>
-                               <p class="text-sm text-gray-600">Coursera · Issued Mar 2020</p>
-                           </div>
-                       </div>
-                   </a>
-                   <a href="https://www.coursera.org/account/accomplishments/certificate/262W5HCWDPRQ" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Essential GCP Infrastructure</h3>
-                               <p class="text-sm text-gray-600">Coursera · Issued Mar 2020</p>
-                           </div>
-                       </div>
-                   </a>
-                   <a href="https://www.coursera.org/account/accomplishments/certificate/SFTWL86TDVZQ" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">GCP Fundamentals: Core Infra</h3>
-                               <p class="text-sm text-gray-600">Coursera · Issued May 2020</p>
-                           </div>
-                       </div>
-                   </a>
-                   <a href="https://www.linkedin.com/learning/certificates/423917b7b46145d784b09f62cca33cb95d1bd16a79d13f7094f0db84f3f17cb5?trk=share_certificate" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">Introduction to Prompt Engineering for Generative AI</h3>
-                               <p class="text-sm text-gray-600">LinkedIn · Issued Jul 2025</p>
-                           </div>
-                       </div>
-                   </a>
-                   <a href="https://www.linkedin.com/learning/certificates/62a7d38064fccb960f33af392d2ce4e1ede08217bffa22bc1706ff796d6dcd58?trk=share_certificate" target="_blank" rel="noopener noreferrer" class="block">
-                       <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                           <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">C</div>
-                           <div>
-                               <h3 class="font-bold text-gray-800">What is Generative AI?</h3>
-                               <p class="text-sm text-gray-600">LinkedIn · Issued Jul 2025</p>
-                           </div>
-                       </div>
-                   </a>
-                   <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
-                       <div class="text-3xl flex-shrink-0 w-10 h-10 flex items-center justify-center">🎓</div>
-                       <div>
-                           <h3 class="font-bold text-gray-800">Diploma in Computing Studies</h3>
-                           <p class="text-sm text-gray-600">City and Guilds of London Institute</p>
-                       </div>
-                   </div>
-                 </div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Education & Certifications</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="https://www.credential.net/d2ecaa18-3b69-4e95-a489-db4c4e6fc6a4" target="_blank"
+                        rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xl">
+                                G</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Professional Cloud Developer</h3>
+                                <p class="text-sm text-gray-600">Google Cloud · Issued Jul 2022</p>
+                                <p class="text-xs text-red-500 font-semibold">Expired Jul 2024</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.credential.net/5cac76fc-1bf7-43f3-9d56-f5dc61020428" target="_blank"
+                        rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xl">
+                                G</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Professional Cloud Architect</h3>
+                                <p class="text-sm text-gray-600">Google Cloud · Issued Aug 2020</p>
+                                <p class="text-xs text-red-500 font-semibold">Expired Sep 2024</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.youracclaim.com/badges/f90ddc29-c77c-4a6d-b8c6-fdddb190d430/linked_in_profile"
+                        target="_blank" rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div class="w-10 h-10 flex-shrink-0 grid grid-cols-2 gap-px p-1">
+                                <div class="bg-red-500"></div>
+                                <div class="bg-green-500"></div>
+                                <div class="bg-blue-500"></div>
+                                <div class="bg-yellow-400"></div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Azure Fundamentals</h3>
+                                <p class="text-sm text-gray-600">Microsoft · Issued Mar 2020</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.cloudskillsboost.google/public_profiles/345e7094-81e9-4b1a-834a-5b927ab709c3/badges/2337826?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+                        target="_blank" rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                C</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">BigQuery for Data Analysis</h3>
+                                <p class="text-sm text-gray-600">Google Cloud Skills Boost · Jun 2022</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.cloudskillsboost.google/public_profiles/345e7094-81e9-4b1a-834a-5b927ab709c3/badges/2338150?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+                        target="_blank" rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                Google</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Migrating Virtual Machines</h3>
+                                <p class="text-sm text-gray-600">Google Cloud Skills Boost · Jun 2022</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/L5MN8A8TREG9" target="_blank"
+                        rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                C</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">App Deployment, Debugging, and Performance</h3>
+                                <p class="text-sm text-gray-600">Coursera · Issued Mar 2022</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/59EDCEWBL4ZU" target="_blank"
+                        rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                C</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Getting Started With App Development</h3>
+                                <p class="text-sm text-gray-600">Coursera · Issued Mar 2022</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/3X5ENDN6GHFJ" target="_blank"
+                        rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                C</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Getting Started with GKE</h3>
+                                <p class="text-sm text-gray-600">Coursera · Issued Mar 2022</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/2PPSSQYMEN3M" target="_blank"
+                        rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                C</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Securing & Integrating App...</h3>
+                                <p class="text-sm text-gray-600">Coursera · Issued Mar 2022</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.credential.net/0e8f23ab-f53b-4725-b304-0214e69b61bb" target="_blank"
+                        rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                R</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Architecting with GKE</h3>
+                                <p class="text-sm text-gray-600">ROI Training · Issued Nov 2020</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/XVKQ4HMGK978" target="_blank"
+                        rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                C</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Reliable GCP Infrastructure</h3>
+                                <p class="text-sm text-gray-600">Coursera · Issued May 2020</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/B3DH9LNQRNL2" target="_blank"
+                        rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                C</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Elastic GCP Infrastructure</h3>
+                                <p class="text-sm text-gray-600">Coursera · Issued Mar 2020</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/262W5HCWDPRQ" target="_blank"
+                        rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                C</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Essential GCP Infrastructure</h3>
+                                <p class="text-sm text-gray-600">Coursera · Issued Mar 2020</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/SFTWL86TDVZQ" target="_blank"
+                        rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                C</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">GCP Fundamentals: Core Infra</h3>
+                                <p class="text-sm text-gray-600">Coursera · Issued May 2020</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/learning/certificates/423917b7b46145d784b09f62cca33cb95d1bd16a79d13f7094f0db84f3f17cb5?trk=share_certificate"
+                        target="_blank" rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                C</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Introduction to Prompt Engineering for Generative AI
+                                </h3>
+                                <p class="text-sm text-gray-600">LinkedIn · Issued Jul 2025</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/learning/certificates/62a7d38064fccb960f33af392d2ce4e1ede08217bffa22bc1706ff796d6dcd58?trk=share_certificate"
+                        target="_blank" rel="noopener noreferrer" class="block">
+                        <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                            <div
+                                class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 font-bold text-xl">
+                                C</div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">What is Generative AI?</h3>
+                                <p class="text-sm text-gray-600">LinkedIn · Issued Jul 2025</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="glass-card p-6 rounded-xl shadow-lg flex items-center space-x-4 h-full">
+                        <div class="text-3xl flex-shrink-0 w-10 h-10 flex items-center justify-center">🎓</div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Diploma in Computing Studies</h3>
+                            <p class="text-sm text-gray-600">City and Guilds of London Institute</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section id="eligibility" class="fade-in-section">
@@ -576,7 +710,7 @@
 
             init();
             animate();
-            
+
             // Achievement toggle
             const toggleBtn = document.getElementById('toggle-achievement');
             const detailsDiv = document.getElementById('achievement-details');
@@ -596,4 +730,5 @@
 
     </script>
 </body>
+
 </html>
