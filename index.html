@@ -741,6 +741,23 @@
         });
 
     </script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDWjNdQtZi0Fl53Yl7AC88T5SwQYah3Dvg",
+            authDomain: "mycv-ae854.firebaseapp.com",
+            projectId: "mycv-ae854",
+            storageBucket: "mycv-ae854.firebasestorage.app",
+            messagingSenderId: "126877715863",
+            appId: "1:126877715863:web:35b64717758e4f138d08d2",
+            measurementId: "G-MDFFRHQ5VJ"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
 
 </html>
