@@ -754,9 +754,20 @@
             appId: "1:126877715863:web:35b64717758e4f138d08d2",
             measurementId: "G-MDFFRHQ5VJ"
         };
+        try {
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+            console.log("Firebase initialized successfully");
 
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+            // Log a test event
+            analytics.logEvent('page_view', {
+                page_title: 'CV',
+                page_location: window.location.href
+            });
+            console.log("Analytics event logged");
+        } catch (error) {
+            console.error("Firebase initialization error:", error);
+        }
     </script>
 </body>
 
